@@ -1,0 +1,101 @@
+<!-- <div class="overall"> -->
+    <img class="wave" src="../../../../assets/img/wave.png">
+    <div class="container">
+      <div class="img">
+        <img src="../../../../assets/img/bg.svg">
+      </div>
+    
+      <div class="login-content">
+        <p class="main-title">Self Check In<br> Here </p>
+        <!-- <h3 class="title">Welcomes you</h3> -->
+        <form action="index.html">
+          <img class="avtar" src="../../../assets/img/avatar.svg">
+    
+          <button type="button" class="btn btn-outline-dark shadow-none me-lg-3 me-2" data-bs-toggle="modal"
+            data-bs-target="#loginModal">
+            Login
+          </button>
+          <!-- <button type="button" class="btn btn-outline-dark shadow-none " data-bs-toggle="modal"
+            data-bs-target="#registerModal">
+            Register
+          </button> -->
+        </form>
+        <button type="button" class="btn btn-outline-dark shadow-none me-lg-3 me-2" [routerLink]="['/main']">
+          Sneak to Homepage
+        </button>
+      </div>
+    
+    </div>
+    
+    
+    <div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- <form [formGroup]="loginpage" novalidate method="post" action="localhost:3000/login" >
+            <div class="modal-header">
+              <h5 class="modal-title ">
+                <i class="bi bi-person-vcard-fill"></i> User Login
+              </h5>
+              <button type="reset" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label class="form-label">Email address</label>
+                <input type="email" class="form-control " formControlName="email">
+              </div>
+              <span class="text-danger" *ngIf="email.errors?.['required'] && (email.touched || email.dirty)">Email is
+                required</span>
+              <span class="text-danger" *ngIf="email.errors?.['email'] && (email.touched || email.dirty)">Email is
+                invalid</span>
+              <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-control " formControlName="password">
+              </div>
+              <span class="text-danger"
+                *ngIf="password.errors?.['required'] && (password.touched || password.dirty)">Password is required</span>
+              <span class="text-danger"
+                *ngIf="password.errors?.['minlength'] && (password.touched || password.dirty)">Password Should be atleast 8
+                characters long</span>
+              <div class="d-flex align-items-centre justify-contents-between mb-2">
+                <button type="submit" class="btn btn-dark" (ngSubmit)="login(loginpage)">LOGIN</button>
+              </div>
+              <a href="javascript:void(0)" class="text-secondary text-decoration-none">Forgot Password?</a>
+            </div>
+          </form> -->
+          <main class="form-signin">
+            <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+        
+                <div class="modal-header">
+                    <h5 class="modal-title ">
+                      <i class="bi bi-person-vcard-fill"></i> User Login
+                    </h5>
+                    <button type="reset" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+        
+                <div class="form-floating">
+                    <input type="text" #username="ngModel" [(ngModel)]="model.username" class="form-control" id="username"
+                        placeholder="Usernama" name="username">
+                    <label for="username">Username</label>
+                </div>
+                <div class="form-floating">
+                    <input type="password" #password="ngModel" [(ngModel)]="model.password" class="form-control"
+                        id="floatingPassword" placeholder="Password" name="password">
+                    <label for="floatingPassword">Password</label>
+                </div>
+        
+        
+                <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+                <a [routerLink]="['/register']" data-bs-dismiss="modal"> Create Account</a>
+        
+            </form>
+        </main>
+        
+          <!-- <p>Form value: {{ login.value | json }}</p>
+          <p>Form status: {{ login.status | json }}</p> -->
+        </div>
+      </div>
+    </div>
+    
+    
+    

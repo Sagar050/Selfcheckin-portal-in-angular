@@ -1,0 +1,145 @@
+
+<header class="header" id="header">
+    <div class="head-top">
+        <a href="#" class="site-name">
+            <span>Sagar Dwivedi <br>Group of Residencies</span>
+        </a>
+    </div>
+
+    <div class="head-bottom flex">
+        <h3>Experience Premium and Luxurious <br>stay with</h3>
+        <h2>SD Group of Residencies</h2>
+        <p>Escape to the lap of luxury at our stunning 5-star hotel. Experience the ultimate in relaxation and
+            indulgence with our impeccable service, exquisite dining options, and oppulent accomadations.
+            Book your stay at SD Group of Residencies and let us make your dreams a reality.</p>
+        <button type="button" class="head-btn" data-bs-toggle="modal" data-bs-target="#loginModal">GET STARTED</button>
+    </div>
+</header>
+<!-- end of header -->
+
+<!-- side navbar -->
+<!-- Modal -->
+<div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Choose Here</h5>
+                <button type="button" class="btn-close me-2" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <nav class="nav flex-column">
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button class="btn btn-light" data-bs-dismiss="modal" type="button"
+                        routerLink="/rooms">Rooms</button>
+                        <button class="btn btn-light" data-bs-dismiss="modal" type="button" routerLink="/amenities">Aminities</button>
+                        <button class="btn btn-light" data-bs-dismiss="modal" type="button"
+                        routerLink="/user">Dashboard</button>
+                    </div>
+                </nav>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" routerLink="/login">Login /
+                    Signup</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- body content  -->
+<section class = "book">
+    <form class = "book-form">
+        <div class = "form-item">
+            <label for = "checkin-date">Check In Date: </label>
+            <input type = "date" id = "chekin-date">
+        </div>
+        <div class = "form-item">
+            <label for = "checkout-date">Check Out Date: </label>
+            <input type = "date" id = "chekout-date">
+        </div>
+        <div class = "form-item">
+            <label for = "adult">Adults: </label>
+            <input type = "number" min = "1" value = "1" id = "adult">
+        </div>
+        <div class = "form-item">
+            <label for = "children">Children: </label>
+            <input type = "number" min = "1" value = "1" id = "children">
+        </div>
+        <div class = "form-item">
+            <label for = "roomNumber">Rooms: </label>
+            <input type = "number" min = "1" value = "1" id="roomNumber" [(ngModel)]="roomNumber">
+        </div>
+        <div class = "form-item">
+            <input type = "submit" class = "btn" value = "Check Availibilty" (click)="checkAvailability()">
+        </div>
+    </form>
+    <p >{{ availabilityMessage }}</p>
+</section>
+
+<section class="customers" id="customers">
+    <div class="sec-width">
+        <div class="title">
+            <h2>Customer Reviews</h2>
+        </div>
+        <div class="customers-container">
+            <!-- single customer -->
+            <div class="customer">
+                <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+
+                </div>
+                <h3>We Loved it</h3>
+                <p>I had a wonderful experience at the SD Group of Residencies. Every staff member I encountered, from
+                    the valet to the check- in to the cleaning staff were delightful and eager to help! Thank you! Will
+                    recommend to my colleagues!</p>
+                <img src="../../assets/img/naitik.png" alt="customer image">
+                <span>Naitik Chowdhary, India</span>
+            </div>
+            <!-- end of single customer -->
+            <!-- single customer -->
+            <div class="customer">
+                <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+                <h3>Comfortable Living</h3>
+                <p>This is the perfect hotel for a weekend getaway in Noida. The downtown area on Main Street is a best
+                    kept secret and the SD Residencies offers everything you need if you don’t feel like venturing out.
+                </p>
+                <img src="../../assets/img/varshit.png" alt="customer image">
+                <span>Varshit Sindhu, India</span>
+            </div>
+            <!-- end of single customer -->
+            <!-- single customer -->
+            <div class="customer">
+                <div class="rating">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                </div>
+                <h3>Nice Place</h3>
+                <p>The best hotel I’ve ever been privileged enough to stay at. Gorgeous building, and it only gets more
+                    breathtaking when you walk in. High quality rooms (there was even a tv by the shower), and high
+                    quality service. Also, they are one of few hotels that allow people under 21 to book a reservation.
+                </p>
+                <img src="../../assets/img/sagar.png" alt="customer image">
+                <span>Sagar Dwivedi, India</span>
+            </div>
+            <!-- end of single customer -->
+        </div>
+    </div>
+</section>
+<!-- end of body content -->
+
+<!-- footer -->
+<!-- <app-footer></app-footer> -->
+
